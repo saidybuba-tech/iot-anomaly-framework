@@ -1,0 +1,19 @@
+data:
+  path: data/sample_flows.csv
+  source_type: csv
+  target_column: label        # CIC IoT 2023: "label" (BenignTraffic = normal)
+  features: null              # null = all numeric columns; or a list of feature names
+  scaler: standard            # standard | minmax
+
+model:
+  name: isolation_forest      # isolation_forest | autoencoder | xgboost
+  params:
+    n_estimators: 100
+
+threshold: null               # null = 99th percentile of scores
+output:
+  format: console             # console | json
+
+routing:
+  theta1: 0.3
+  theta2: 0.7

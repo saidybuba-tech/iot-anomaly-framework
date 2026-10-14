@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+data/*.csv
+!data/sample_flows.csv
+experiments/results.json
+*.onnx
